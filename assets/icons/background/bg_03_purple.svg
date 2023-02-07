@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="922" viewBox="0 0 1920 922">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="box" width="1920" height="922" transform="translate(-160 2609)" fill="#7356bd"/>
+    </clipPath>
+  </defs>
+  <g id="bg_03_purple" transform="translate(160 -2609)">
+    <rect id="box-2" data-name="box" width="1920" height="922" transform="translate(-160 2609)" fill="#7356bd"/>
+    <g id="bg_03" clip-path="url(#clip-path)">
+      <rect id="box-3" data-name="box" width="900" height="900" rx="450" transform="translate(996 2132)" fill="#8645d3"/>
+      <rect id="box-4" data-name="box" width="1000" height="1000" rx="500" transform="translate(-500 2930)" fill="#7870d5"/>
+    </g>
+  </g>
+</svg>
