@@ -121,7 +121,7 @@ export default {
 
 .white-triangle {
   position: absolute;
-  top: 584px;
+  top: 580px;
 }
 
 .btn-download--wrapper {
@@ -229,7 +229,7 @@ export default {
 
   .white-triangle {
     position: absolute;
-    top: 570px;
+    top: 569px;
   }
 
   .btn-download--wrapper {
