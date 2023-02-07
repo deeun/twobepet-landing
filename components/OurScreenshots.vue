@@ -47,8 +47,19 @@ export default {
   },
   mounted() {
     this.event()
+    this.dotChangeOnTime()
   },
   methods: {
+    dotIndicator () {
+      const slide1 = document.getElementById("ss-slide-1");
+      const slide2 = document.getElementById("ss-slide-2");
+
+      this.isActiveOne = slide1.getBoundingClientRect().x > -400;
+      this.isActiveTwo = slide2.getBoundingClientRect().x < 700 && slide2.getBoundingClientRect().x > -400;
+    },
+    dotChangeOnTime() {
+      setInterval(this.dotIndicator, 1000)
+    },
     event() {
       const slider = document.querySelector('.ss-slides');
       let isDown = false;
@@ -59,12 +70,12 @@ export default {
         isDown = true;
         startX = e.pageX - slider.offsetLeft;
         scrollLeft = slider.scrollLeft;
-        dotIndicator()
+        this.dotIndicator()
       });
 
       slider.addEventListener('mouseup', () => {
         isDown = false;
-        dotIndicator()
+        this.dotIndicator()
       });
 
       slider.addEventListener('mousemove', (e) => {
@@ -73,18 +84,8 @@ export default {
         const x = e.pageX - slider.offsetLeft;
         const walk = (x - startX) * 0.7; // scroll-fast
         slider.scrollLeft = scrollLeft - walk;
-        dotIndicator()
+        this.dotIndicator()
       });
-
-      const dotIndicator = () => {
-        const slide1 = document.getElementById("ss-slide-1");
-        const slide2 = document.getElementById("ss-slide-2");
-        // const slide3 = document.getElementById("ss-slide-3");
-
-        this.isActiveOne = slide1.getBoundingClientRect().x > -400;
-        this.isActiveTwo = slide2.getBoundingClientRect().x < 700 && slide2.getBoundingClientRect().x > -400;
-        // this.isActiveThree = slide3.getBoundingClientRect().x < 700 && slide3.getBoundingClientRect().x > -400;
-      }
     },
   },
 }
@@ -137,7 +138,7 @@ export default {
 }
 
 .ss-slides-group {
-  padding: 10px;
+  padding: 10px 0 0 10px;
   display: flex;
   justify-content: space-between;
 }
@@ -205,12 +206,26 @@ export default {
     margin-left: 24px;
   }
 
+  .ss-slides {
+    height: 488px;
+  }
+
   .ss-slides-group div {
+    width: 264px;
+    height: 468px;
     margin-right: 24px;
+  }
+
+  .ss-slide-img {
+    width: 264px;
   }
 
   .dot-indicator--area {
     min-width: 300px;
+  }
+
+  .dot-indicator--wrapper {
+    margin-bottom: 120px;
   }
 }
 </style>용
