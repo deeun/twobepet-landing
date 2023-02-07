@@ -117,7 +117,7 @@ export default {
   left: 0;
   background-image: url("assets/icons/background/bg_01_purple@2x.png");
   background-size: cover;
-}정
+}
 
 .white-triangle {
   position: absolute;
