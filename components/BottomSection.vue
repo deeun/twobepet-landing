@@ -38,7 +38,7 @@
       </div>
       <div class="fx-justify-content-center mg-bottom-4">
         <span class="bottom-sec-info--title">주소</span>
-        <span class="bottom-sec-info--content">서울 강서구 양천로 401 강서한강자이타워 B동 1301호</span>
+        <span class="bottom-sec-info--content">서울 강서구 양천로 401 <br class="desktop-remove"/> 강서한강자이타워 B동 1301호</span>
       </div>
       <div class="fx-justify-content-center mg-top-16">
         <span class="bottom-sec-info--content">ⓒ 2023. 2bpet all rights reserved.</span>
@@ -100,6 +100,10 @@ export default {
   font: normal normal normal 14px 'Noto Sans Regular';
 }
 
+.desktop-remove {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   .bottom-sec-wrapper {
     min-width: 300px;
@@ -133,5 +137,11 @@ export default {
   .bottom-sec-info--policy {
     margin-top: 40px;
   }
+
+  .desktop-remove {
+    display: block !important;
+    background: red;
+  }
 }
 </style>
+용
