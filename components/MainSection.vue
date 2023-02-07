@@ -21,11 +21,11 @@
             </div>
             <div class="btn-download--wrapper">
               <button
-                class="btn-download--1"
+                class="btn-download--1 center"
                 @click="storeAOS">
                 <img
                   class="btn-download--img"
-                  src="../assets/icons/icon/ico_google_play.png" alt=""/></button>
+                  src="../assets/icons/icon/ico_google_play.png" width="130px" alt=""/></button>
               <button
                 class="btn-download--2"
                 @click="storeIOS">
@@ -117,11 +117,11 @@ export default {
   left: 0;
   background-image: url("assets/icons/background/bg_01_purple@2x.png");
   background-size: cover;
-}
+}정
 
 .white-triangle {
   position: absolute;
-  top: 580px;
+  top: 583px;
 }
 
 .btn-download--wrapper {
