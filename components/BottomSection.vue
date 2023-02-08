@@ -20,7 +20,7 @@
     <!-- 사업자 정보 -->
     <div class="bottom-sec-info--wrapper">
       <div class="bottom-sec-info--policy fx-justify-content-center mg-bottom-16">
-        <span>이용약관</span>&nbsp; | &nbsp;<span>개인정보처리방침</span>
+        <span @click="policyTerms">이용약관</span>&nbsp; | &nbsp;<span @click="policyPrivacy">개인정보처리방침</span>
       </div>
       <div class="fx-justify-content-center mg-bottom-4">
         <span class="bottom-sec-info--title">회사명</span>
@@ -49,7 +49,15 @@
 
 <script>
 export default {
-  name: "BottomSection"
+  name: "BottomSection",
+  methods: {
+    policyTerms () {
+      window.open('https://api.twobpet.com/api/v1/contents/html/EVENT/1659012684097')
+    },
+    policyPrivacy () {
+      window.open('https://api.twobpet.com/api/v1/contents/html/EVENT/1659012803709')
+    }
+  }
 }
 </script>
 
@@ -87,6 +95,7 @@ export default {
 .bottom-sec-info--policy > * {
   color: #999999;
   font: normal normal normal 14px 'Noto Sans Regular';
+  cursor: pointer;
 }
 
 .bottom-sec-info--title {
